@@ -1,20 +1,14 @@
-function add(n1, n2, showResult, phrase) {
-    // console.log(typeof number1);
-    // if (typeof n1 !== 'number' || typeof n2 !== 'number'){
-    //     throw new Error('incorrect input')
-    // }
-    var result = n1 + n2;
-    if (showResult) {
-        console.log(phrase + result);
+function combine(input1, input2) {
+    var result;
+    if (typeof input1 == 'number' && typeof input2 == 'number') {
+        result = input1 + input2;
     }
     else {
-        return n1 + n2;
+        result = input1.toString() + input2.toString();
     }
+    return result;
 }
-var number1;
-number1 = 5;
-var number2 = 2.8;
-var printResult = true;
-var resultPhrase = 'Result is = ';
-var result = add(number1, number2, printResult, resultPhrase);
-console.log(result);
+var combinedAges = combine(20, 30);
+console.log(combinedAges);
+var combinedNames = combine('adhe', 'ichsan');
+console.log(combinedNames);
